@@ -1,0 +1,17 @@
+# 実行ファイル
+a.out
+*.exe
+*.out
+a
+
+# --- コンパイル生成物 ---
+*.o
+*.obj
+*.lo
+*.la
+*.al
+*.so
+*.dll
+*.dylib
+*.a
+*.lib
