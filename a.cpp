@@ -1,11 +1,15 @@
 #include <iostream>
-#include <string>
+// #include <string>
 
 using namespace std;
 
 int main() {
-  string message;
 
-  cin >> message;
-  cout << message << endl;
+  for (int i = 0; i < 5; i++) {
+    cout << i << endl;
+  }
+
+  const int Num[] = {10, 20, 30};
+  cout << Num[1] << endl;
+  
 }

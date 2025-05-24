@@ -24,4 +24,34 @@ gcc main.o -lstdc++ -o main
 
 ```
 
+## 環境設定 / 高速入出力
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+ 
+// 高速 IO
+struct FastIO {
+    FastIO() {
+        ios::sync_with_stdio(false);
+        cin.tie(nullptr);
+    }
+} fastio;
+```
+
+## 型エイリアス / マクロ
+```cpp
+using ll   = long long;
+using vi   = vector<int>;
+using vll  = vector<ll>;
+using pii  = pair<int,int>;
+using pll  = pair<ll,ll>;
+```
+
+## ビルトイン関数
+```cpp
+#define popcount(x)     __builtin_popcountll(x)
+#define clz(x)          __builtin_clzll(x)
+#define ctz(x)          __builtin_ctzll(x)
+```
+
 
