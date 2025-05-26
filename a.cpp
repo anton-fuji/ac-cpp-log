@@ -3,13 +3,18 @@
 
 using namespace std;
 
+int nibai(int a) {
+  int goukei = a * 200;
+  return goukei;
+}
+
 int main() {
-
-  for (int i = 0; i < 5; i++) {
-    cout << i << endl;
-  }
-
-  const int Num[] = {10, 20, 30};
-  cout << Num[1] << endl;
-  
+  int apple;
+  cout << "apple?" << "\n";
+  cin >> apple;
+  int judge = nibai(apple);
+  if (judge > 3000)
+    cout << "予算オーバー\n";
+  else
+    cout << "購入可能\n";
 }
