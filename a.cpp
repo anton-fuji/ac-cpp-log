@@ -1,25 +1,22 @@
+#include <cmath>
 #include <iostream>
 
 using namespace std;
 
-int equation(int a, int b);
-
-double equation(double a, double b);
-
 int main() {
   int x = 10;
+  cout << &x << endl;
+
+  int *xPtr;
+  xPtr = &x;
+
+  cout << *xPtr << endl;
+  cout << xPtr << endl;
+
   int y = 10;
+  int *yPtr = &y;
 
-  int z = equation(x, y);
-  cout << z << endl;
+  cout << *yPtr << endl;
 
-  double xd = 1.5;
-  double yd = 0.1;
-
-  double zd = equation(xd, yd);
-  cout << zd << endl;
+  cout << *yPtr << endl;
 }
-
-int equation(int a, int b) { return 2 * a + b; }
-
-double equation(double a, double b) { return 2 * a + b; }
