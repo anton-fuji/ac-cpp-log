@@ -1,20 +1,19 @@
 #include <iostream>
-// #include <string>
 
 using namespace std;
 
-int nibai(int a) {
-  int goukei = a * 200;
-  return goukei;
-}
+void say_hello() { cout << "Hello World" << endl; }
+
+int sqrt(int a) { return a * a; }
 
 int main() {
-  int apple;
-  cout << "apple?" << "\n";
-  cin >> apple;
-  int judge = nibai(apple);
-  if (judge > 3000)
-    cout << "予算オーバー\n";
-  else
-    cout << "購入可能\n";
+  say_hello();
+  say_hello();
+  say_hello();
+
+  int x = 10;
+  int y = x * x;
+
+  int y2 = sqrt(x);
+  cout << y2 << endl;
 }
