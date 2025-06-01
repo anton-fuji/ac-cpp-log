@@ -1,22 +1,15 @@
-#include <cmath>
 #include <iostream>
+#include <ostream>
+#include <vector>
 
 using namespace std;
 
 int main() {
-  int x = 10;
-  cout << &x << endl;
+  vector<string> v;
+  v = {"zero", "one", "two", "three"};
 
-  int *xPtr;
-  xPtr = &x;
-
-  cout << *xPtr << endl;
-  cout << xPtr << endl;
-
-  int y = 10;
-  int *yPtr = &y;
-
-  cout << *yPtr << endl;
-
-  cout << *yPtr << endl;
+  cout << v.size() << endl;
+  cout << v.at(3) << endl;
+  cout << v[3] << endl;
+  return 0;
 }
