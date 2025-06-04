@@ -1,12 +1,24 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
 int main() {
-  int s, h, m, se;
-  cin >> s;
-  h = s / 3600;
-  m = s % 3600 / 60;
-  se = s % 60;
-  cout << h << ":" << m << ":" << se << endl;
+  int n, a, b;
+  cin >> n >> a >> b;
+
+  vector<int> c(n);
+  for (int i = 0; i < n; i++) {
+    cin >> c[i];
+  }
+
+  int ans = a + b;
+  for (int i = 0; i < n; i++) {
+    if (ans == c[i]) {
+      cout << i + 1 << endl;
+      return 0;
+    }
+  }
+
+  return 0;
 }
