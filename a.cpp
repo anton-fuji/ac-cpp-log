@@ -1,35 +1,22 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #define rep(i, n) for (int i = 0; i < (n); ++i)
 
 using namespace std;
 
-bool similar(char a, char b) {
-  if (a == b)
-    return true;
-  if (a == '1' && b == 'l')
-    return true;
-  if (a == 'l' && b == '1')
-    return true;
-  if (a == 'o' && b == '0')
-    return true;
-  if (a == '0' && b == 'o')
-    return true;
-  return false;
-}
-
 int main() {
   int n;
   cin >> n;
-  string s, t;
-  cin >> s >> t;
+  vector<string> s(n);
+  vector<int> a(n);
 
+  rep(i, n) cin >> s[i] >> a[i];
+  int si = 0;
+  rep(i, n) if (a[i] < a[si]) si = i;
   rep(i, n) {
-    if (!similar(s[i], t[i])) {
-      cout << "No" << endl;
-      return 0;
-    }
+    int ni = (si + i) % n;
+    cout << s[ni] << endl;
   }
-  cout << "Yes" << endl;
   return 0;
 }
