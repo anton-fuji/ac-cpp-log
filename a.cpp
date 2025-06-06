@@ -1,3 +1,4 @@
+#include <cmath>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -8,15 +9,9 @@ using namespace std;
 int main() {
   int n;
   cin >> n;
-  vector<string> s(n);
-  vector<int> a(n);
 
-  rep(i, n) cin >> s[i] >> a[i];
-  int si = 0;
-  rep(i, n) if (a[i] < a[si]) si = i;
-  rep(i, n) {
-    int ni = (si + i) % n;
-    cout << s[ni] << endl;
-  }
+  int ans = round(n / 5.0) * 5;
+  cout << ans << endl;
+
   return 0;
 }
