@@ -10,6 +10,22 @@
 | ライブラリリンク   | 手動で `-lstdc++` が必要             | libstdc++ 等 C++ ランタイムを自動リンク        |
 | ファイル拡張子判定 | `.c`/`.s` を C と判定               | `.cpp`/`.cc` を C++ と判定                    |
 
+
+### Main Setup
+```cpp
+#include <cmath>
+#include <iostream>
+#define rep(i, n) for (int i = 0; i < (n); ++i)
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+
+}
+```
+
 #### Example
 
 ```bash
