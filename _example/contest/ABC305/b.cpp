@@ -14,4 +14,3 @@ int main() {
   cout << ans << endl;
   return 0;
 }
-int main() { cout << "Hello" << endl; }
