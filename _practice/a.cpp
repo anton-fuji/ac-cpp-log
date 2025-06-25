@@ -4,16 +4,20 @@
 using namespace std;
 
 int main() {
-  int n;
-  cin >> n;
-  string s(n, '-');
+  string s;
+  cin >> s;
 
-  if (n % 2 == 0) {
-    s[n / 2 - 1] = '=';
-    s[n / 2] = '=';
-  } else {
-    s[n / 2] = '=';
+  bool exists[26] = {false};
+
+  for (char c : s) {
+    exists[c - 'a'] = true;
   }
-  cout << s << endl;
+
+  for (int i = 0; i < 26; i++) {
+    if (!exists[i]) {
+      cout << (char)('a' + i) << endl;
+      break;
+    }
+  }
   return 0;
 }
