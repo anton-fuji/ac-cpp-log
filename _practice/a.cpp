@@ -4,20 +4,20 @@
 using namespace std;
 
 int main() {
-  string s;
-  cin >> s;
-
-  bool exists[26] = {false};
-
-  for (char c : s) {
-    exists[c - 'a'] = true;
-  }
-
-  for (int i = 0; i < 26; i++) {
-    if (!exists[i]) {
-      cout << (char)('a' + i) << endl;
-      break;
+  int n;
+  string t, a;
+  cin >> n;
+  cin >> t >> a;
+  int cnt = 0;
+  rep(i, n) {
+    if (t[i] == 'o' && a[i] == 'o') {
+      cnt++;
     }
+  }
+  if (cnt > 0) {
+    cout << "Yes" << endl;
+  } else {
+    cout << "No" << endl;
   }
   return 0;
 }
