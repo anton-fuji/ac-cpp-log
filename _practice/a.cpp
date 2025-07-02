@@ -1,22 +1,25 @@
 #include <iostream>
-#include <vector>
 #define rep(i, n) for (int i = 0; i < (n); ++i)
 
 using namespace std;
 
 int main() {
-  int n, k;
+  int n;
   cin >> n;
-  vector<int> a(n);
-  rep(i, n) cin >> a[i];
-  cin >> k;
+  string t, a;
+  cin >> t >> a;
 
   int cnt = 0;
   rep(i, n) {
-    if (a[i] >= k) {
+    if (t[i] == 'o' && a[i] == 'o') {
       cnt++;
     }
   }
-  cout << cnt << endl;
+
+  if (cnt > 0) {
+    cout << "Yes" << endl;
+  } else {
+    cout << "No" << endl;
+  }
   return 0;
 }
